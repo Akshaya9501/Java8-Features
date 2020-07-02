@@ -1,4 +1,4 @@
-package features;
+package dto;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,15 +7,15 @@ import java.util.List;
 //Immutable custom class 
 public final class Employee {
 
-	private final int emp_id;
+	private final int id;
 	private final String name;
 	private final String[] phones;
 	private final String[] address;
-	private final List<Department> dept;
+	private final List<Department> deptList;
 
-	public Employee(int emp_id, String name, String[] phones, String[] address, List<Department> dept) {
+	public Employee(int id, String name, String[] phones, String[] address, List<Department> dept) {
 		super();
-		this.emp_id = emp_id;
+		this.id = id;
 		this.name = name;
 		this.phones = phones.clone();
 		this.address = address.clone();
@@ -28,19 +28,19 @@ public final class Employee {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		this.dept = deptList;
+		this.deptList = deptList;
 	}
 
 	public List<Department> getDept() {
 		List<Department> dept = new ArrayList<Department>();
-		for (Department deptObj : this.dept) {
+		for (Department deptObj : this.deptList) {
 			dept.add((Department) deptObj.clone());
 		}
 		return dept;
 	}
 
-	public int getEmp_id() {
-		return emp_id;
+	public int getid() {
+		return id;
 	}
 
 	public String getName() {
@@ -59,7 +59,7 @@ public final class Employee {
 		return copyAdd;
 	}
 
-	public static void main(String args[]){
+	public static void main(String args[]) {
 		String[] address = { "Mumbai", "Thane", "Pune" };
 		String[] phones = { "+918975942656", "+918344795641" };
 		List<Department> deptList = new ArrayList<Department>();
@@ -73,8 +73,8 @@ public final class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [emp_id=" + emp_id + ", name=" + name + ", phones=" + Arrays.toString(phones) + ", address="
-				+ Arrays.toString(address) + ", dept=" + dept + "]";
+		return "Employee [id=" + id + ", name=" + name + ", phones=" + Arrays.toString(phones) + ", address="
+				+ Arrays.toString(address) + ", dept=" + deptList + "]";
 	}
 
 }

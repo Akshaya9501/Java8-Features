@@ -14,15 +14,20 @@ public class BasicMain {
 
 		ArrayList<Employee> emp = new ArrayList<Employee>();
 		EmployeeComparator comp = new EmployeeComparator();
-		ThreadUsingLambda example = new ThreadUsingLambda();
-		emp.add(new Employee("Akshaya", 21));
-		emp.add(new Employee("Atharva", 3));
+		ThreadUsingLambda thread = new ThreadUsingLambda();
+		emp.add(new Employee("Akshaya", 1191899));
+		emp.add(new Employee("Atharva", 201512));
+		// Implementation of ForEach method
+		emp.forEach(i -> System.out.println(i));
+		// Implementation of Comparator
 		comp.compareEmployee(emp);
+		// Iterator implementation
 		iterateCollection(emp);
-		example.lambdaExp();
+		// Thread using Lambda exp
+		thread.lambdaExp();
+		// Using runnable interface
 		RunnableThread rt = new RunnableThread();
 		rt.callThread();
-
 	}
 
 	public static void iterateCollection(ArrayList<Employee> empList) {

@@ -1,4 +1,4 @@
-package features;
+package dto;
 
 public final class Department {
 	private final String name;
