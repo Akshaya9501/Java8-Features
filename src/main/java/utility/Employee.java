@@ -1,5 +1,10 @@
 package utility;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Employee {
 	String name;
 	int id;

@@ -18,7 +18,7 @@ public class BasicMain {
 		emp.add(new Employee("Akshaya", 1191899));
 		emp.add(new Employee("Atharva", 201512));
 		// Implementation of ForEach method
-		emp.forEach(i -> System.out.println(i));
+		emp.forEach(System.out::println);
 		// Implementation of Comparator
 		comp.compareEmployee(emp);
 		// Iterator implementation

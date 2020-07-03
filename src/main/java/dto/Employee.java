@@ -1,10 +1,12 @@
 package dto;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
+import lombok.Data;
+
 //Immutable custom class 
+@Data
 public final class Employee {
 
 	private final int id;
@@ -39,14 +41,6 @@ public final class Employee {
 		return dept;
 	}
 
-	public int getid() {
-		return id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
 	public String[] getPhones() {
 		String[] copyPhone = new String[this.phones.length];
 		System.arraycopy(this.phones, 0, copyPhone, 0, copyPhone.length);
@@ -69,12 +63,6 @@ public final class Employee {
 		System.out.println("Before adding department object:" + emp);
 		deptList.add(new Department("oopm", "senior"));
 		System.out.println("After adding department object:" + emp);
-	}
-
-	@Override
-	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", phones=" + Arrays.toString(phones) + ", address="
-				+ Arrays.toString(address) + ", dept=" + deptList + "]";
 	}
 
 }
