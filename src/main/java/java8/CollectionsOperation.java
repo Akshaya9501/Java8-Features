@@ -14,22 +14,15 @@ public class CollectionsOperation {
 		callList();
 		callSet();
 		callMap();
-
+		// add();
 	}
 
 	public static void callList() {
 
-		List<Integer> num = new ArrayList<>();
-
-		num.add(1);
-		num.add(2);
-		num.add(3);
-		System.out.println("Count" + IntStream.rangeClosed(0, 2).sum());
-
 		List<Student> studentList = new ArrayList<Student>();
-		studentList.add(new Student(1, "Akshaya"));
-		studentList.add(new Student(2, "Atharva"));
-		studentList.add(new Student(3, "Amit"));
+		studentList.add(new Student(1, "Akshaya", 5));
+		studentList.add(new Student(2, "Atharva", 4));
+		studentList.add(new Student(3, "Amit", 2));
 
 		// foreach loop
 		for (Student st : studentList) {
@@ -51,11 +44,21 @@ public class CollectionsOperation {
 
 	}
 
+	public void add() {
+		List<Integer> num = new ArrayList<>();
+
+		num.add(1);
+		num.add(2);
+		num.add(3);
+		System.out.println("Count" + IntStream.rangeClosed(0, 2).sum());
+
+	}
+
 	public static void callSet() {
 		Set<Student> studentSet = new HashSet<Student>();
-		studentSet.add(new Student(1, "Akshaya"));
-		studentSet.add(new Student(2, "Atharva"));
-		studentSet.add(new Student(3, "Amit"));
+		studentSet.add(new Student(1, "Akshaya", 8));
+		studentSet.add(new Student(2, "Atharva", 5));
+		studentSet.add(new Student(3, "Amit", 7));
 		// foreach loop
 		for (Student st : studentSet) {
 			System.out.println("Id:" + st.id);
@@ -77,9 +80,9 @@ public class CollectionsOperation {
 
 	public static void callMap() {
 		Map<Integer, Student> studentMap = new HashMap<Integer, Student>();
-		studentMap.put(1, new Student(1, "Akshaya"));
-		studentMap.put(2, new Student(2, "Atharva"));
-		studentMap.put(3, new Student(3, "Amit"));
+		studentMap.put(1, new Student(1, "Akshaya", 4));
+		studentMap.put(2, new Student(2, "Atharva", 6));
+		studentMap.put(3, new Student(3, "Amit", 2));
 		for (Student st : studentMap.values()) {
 			System.out.println("Id:" + st.id);
 			System.out.println("Name:" + st.name);

@@ -9,7 +9,7 @@ import utility.Employee;
 import utility.EmployeeComparator;
 
 public class BasicMain {
-
+ 
 	public static void main(String[] args) throws InterruptedException {
 
 		ArrayList<Employee> emp = new ArrayList<Employee>();
