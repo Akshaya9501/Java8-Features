@@ -15,5 +15,16 @@ public class Student {
 		this.name = name;
 		this.grade = grade;
 	}
-	
+
+	public Student() {
+		super();
+	}
+
+	public Student(String name) {
+		this.name = name;
+	}
+
+	public void printName() {
+		System.out.println(name);
+	}
 }

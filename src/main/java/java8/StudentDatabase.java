@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentDatabase {
+	public static Student student() {
+		return new Student(1, "Rijul", 4);
+	}
 
 	public static List<Student> addStudents() {
 		List<Student> studentList = new ArrayList<Student>();

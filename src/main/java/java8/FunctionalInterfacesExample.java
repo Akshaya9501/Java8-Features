@@ -10,7 +10,7 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
-public class ConsumerInterfacesExample {
+public class FunctionalInterfacesExample {
 	static Consumer<Student> consumer1 = (student) -> System.out.println(student.getId());
 	static Consumer<Student> consumer2 = (student) -> System.out.println(student.getName());
 	static List<Student> studentList = StudentDatabase.addStudents();
