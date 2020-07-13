@@ -5,9 +5,9 @@ import lombok.Data;
 @Data
 public class Student {
 
-	int id;
-	String name;
-	int grade;
+	 int id;
+	 String name;
+	 int grade;
 
 	public Student(int id, String name, int grade) {
 		super();
